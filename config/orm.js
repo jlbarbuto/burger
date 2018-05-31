@@ -12,15 +12,20 @@ var orm = {
     },
     insertOne: function(table, cols, vals, cb){
         var queryString = "INSERT INTO " + table + " (" + cols.toString() + ") ";
-        queryString += "VALUES (" + 
+        queryString += "VALUES (?,?)";
 
+        console.log(queryString); 
+        connection.query(queryString, vals, function(err, result){
+            if (err) {
+                throw err;
+            }
+            cb(result);
+        });
+    },
+    updateOne: function(table, id, cb){
+        var queryString = "UPDATE " + table + " SET devoured = true WHERE id = " + id;
     }
 
 }
-//selectAll()
-
-//insertOne()
-
-//updateOne()
 
 module.exports = orm;
