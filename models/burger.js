@@ -4,17 +4,17 @@ var orm = require("../config/orm.js");
 
 var burger = {
     all: function(cb) {
-        orm.selectAll("burgers", function(res){
+        orm.all("burgers", function(res){
             cb(res);
         });
     },
-    insert: function(cb) {
-        orm.insertOne("burgers", cols, vals, function(res){
+    insert: function(vals, cb) {
+        orm.insert("burgers", ["burger_name,", "devoured"], vals, function(res){
             cb(res);
         });
     },
-    update: function(id,cb) {
-        orm.updateOne("burgers", id, function(res){
+    update: function(condition, cb) {
+        orm.update("burgers", {devoured: false}, condition, function(res){
             cb(res);
         });
     }
