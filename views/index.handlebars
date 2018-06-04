@@ -1,18 +1,24 @@
 <div class="container">
-    <div class="jumbotron">
-        <h1 class="display-4">Burgers!</h1>
-        <hr class="my-4">
-        <img src="/assets/images/burger.png" width="200px">
+    <br>
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col">
+            <h1 class="display-4 mainTitle">Burgers!</h1>
+        </div>
+        <div class="col">
+        </div>
     </div>
     <br>
     <div class="row">
         <div class="col">
             <h2>Hot and Ready:</h2>
+            <br>
             <ul>
                 {{#each burgers}}
                     {{#unless devoured}}
                         <li>
-                            {{burger_name}}
+                            <h5>{{burger_name}}</h5>
                             <button class="eat-it" data-id="{{id}}">Devour</button>
                         </li>
                         <br>
@@ -23,12 +29,13 @@
 
         <div class="col">
             <h2>Devoured:</h2>
+            <br>
             <ul>
                 {{#each burgers}}
                     {{#if devoured}}
                     <li>
-                        {{burger_name}}
-                        <h4>It's gone...</h4>
+                        <h5>{{burger_name}}<h5></h5>
+                        <p>It's gone...</p>
                     </li>
                     {{/if}}
                 {{/each}}
@@ -36,12 +43,14 @@
         </div>
     </div>
     <br>
-    <h2>Make Your Own!</h2>
-    <form>
-        <div class="form-group">
-            <label for="burgerName">Enter the burger that you wish to eat.</label>
-            <input type="text" class="form-control" id="burgerName" placeholder="Enter burger name">
-        </div>
-        <button type="submit" class="btn btn-primary addBurger">Submit</button>
-    </form>
+    <div class="addForm">
+        <h2>Make Your Own!</h2>
+        <form>
+            <div class="form-group">
+                <label for="burgerName">Enter the burger that you wish to eat.</label>
+                <input type="text" class="form-control" id="burgerName" placeholder="Enter burger name">
+            </div>
+            <button type="submit" class="btn btn-primary addBurger">Submit</button>
+        </form>
+    </div>
 </div>

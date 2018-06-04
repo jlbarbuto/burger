@@ -1,3 +1,20 @@
-.row{
-    background-color: blanchedalmond;
+ul{
+    list-style-type: none;
+}
+
+body{
+    background-image: url(../images/light_burger_slide.jpg);
+}
+
+.addForm{
+    background-color: white;
+    padding: 15px;
+}
+
+.mainTitle{
+    font-family: 'Bowlby One SC', 'cursive';
+}
+
+h2{
+    font-family: 'Acme', 'sans-serif';
 }
