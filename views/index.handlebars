@@ -2,7 +2,7 @@
     <div class="jumbotron">
         <h1 class="display-4">Burgers!</h1>
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <img src="/assets/images/burger.png" width="200px">
     </div>
     <br>
     <div class="row">
@@ -13,7 +13,7 @@
                     {{#unless devoured}}
                         <li>
                             {{burger_name}}
-                            <button class="eat-it" data-id="{{id}}">Devoured</button>
+                            <button class="eat-it" data-id="{{id}}">Devour</button>
                         </li>
                         <br>
                     {{/unless}}
@@ -42,6 +42,6 @@
             <label for="burgerName">Enter the burger that you wish to eat.</label>
             <input type="text" class="form-control" id="burgerName" placeholder="Enter burger name">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary addBurger">Submit</button>
     </form>
 </div>
