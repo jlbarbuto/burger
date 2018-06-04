@@ -7,7 +7,7 @@ USE burgers_db;
 -- Creates the table --
 CREATE TABLE burgers(
 	id INTEGER(20) AUTO_INCREMENT NOT NULL,
-    burger_name VARCHAR(20),
+    burger_name VARCHAR(20) NOT NULL,
     devoured BOOLEAN,
     PRIMARY KEY (id)
 );
